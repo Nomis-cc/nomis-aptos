@@ -1,0 +1,5 @@
+{
+  "AptoslabsExplorerSettings": {
+    "ApiBaseUrl": "https://indexer.mainnet.aptoslabs.com/v1/graphql"
+  }
+}

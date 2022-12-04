@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>7eed6390-25d3-47b1-b3e2-6d5a0f38f0c8</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..</DockerfileContext>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Blockchains\Aptos\Nomis.Api.Aptos\Nomis.Api.Aptos.csproj" />
+    <ProjectReference Include="..\..\Blockchains\Aptos\Nomis.AptoslabsExplorer\Nomis.AptoslabsExplorer.csproj" />
+    <ProjectReference Include="..\..\Services\Application\Nomis.CurrentUserService\Nomis.CurrentUserService.csproj" />
+    <ProjectReference Include="..\..\Services\Infrastructure\Coingecko\Nomis.Coingecko\Nomis.Coingecko.csproj" />
+    <ProjectReference Include="..\..\Services\Infrastructure\Scoring\Nomis.ScoringService\Nomis.ScoringService.csproj" />
+    <ProjectReference Include="..\..\Storage\Nomis.DataAccess.PostgreSql.Scoring\Nomis.DataAccess.PostgreSql.Scoring.csproj" />
+    <ProjectReference Include="..\..\Storage\Nomis.DataAccess.PostgreSql\Nomis.DataAccess.PostgreSql.csproj" />
+    <ProjectReference Include="..\Nomis.Api.Common\Nomis.Api.Common.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GraphQL.Client" Version="5.1.0" />
+    <PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="5.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Services\Infrastructure\Coingecko\Nomis.Coingecko.Interfaces\Nomis.Coingecko.Interfaces.csproj" />
+    <ProjectReference Include="..\..\..\Services\Infrastructure\Scoring\Nomis.ScoringService.Interfaces\Nomis.ScoringService.Interfaces.csproj" />
+    <ProjectReference Include="..\Nomis.AptoslabsExplorer.Interfaces\Nomis.AptoslabsExplorer.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Configs\Aptos.AptoslabsExplorer.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
